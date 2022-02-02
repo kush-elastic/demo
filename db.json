@@ -1,14 +1,80 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "contexts": {
+        "application": {
+            "beans": {
+                "org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration$PrometheusScrapeEndpointConfiguration": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration$PrometheusScrapeEndpointConfiguration",
+                    "resource": null,
+                    "dependencies": []
+                },
+                "endpointCachingOperationInvokerAdvisor": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor",
+                    "resource": "class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/EndpointAutoConfiguration.class]",
+                    "dependencies": [
+                        "environment"
+                    ]
+                },
+                "defaultServletHandlerMapping": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.web.servlet.HandlerMapping",
+                    "resource": "class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]",
+                    "dependencies": []
+                },
+                "metricsRestTemplateCustomizer": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.metrics.web.client.MetricsRestTemplateCustomizer",
+                    "resource": "class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/client/RestTemplateMetricsConfiguration.class]",
+                    "dependencies": [
+                        "prometheusMeterRegistry",
+                        "restTemplateExchangeTagsProvider",
+                        "management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties"
+                    ]
+                }
+            }
+        },
+        "application1": {
+            "beans": {
+                "org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration$PrometheusScrapeEndpointConfiguration": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration$PrometheusScrapeEndpointConfiguration",
+                    "resource": null,
+                    "dependencies": []
+                },
+                "endpointCachingOperationInvokerAdvisor": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor",
+                    "resource": "class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/EndpointAutoConfiguration.class]",
+                    "dependencies": [
+                        "environment"
+                    ]
+                },
+                "defaultServletHandlerMapping": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.web.servlet.HandlerMapping",
+                    "resource": "class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]",
+                    "dependencies": []
+                },
+                "metricsRestTemplateCustomizer": {
+                    "aliases": [],
+                    "scope": "singleton",
+                    "type": "org.springframework.boot.actuate.metrics.web.client.MetricsRestTemplateCustomizer",
+                    "resource": "class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/client/RestTemplateMetricsConfiguration.class]",
+                    "dependencies": [
+                        "prometheusMeterRegistry",
+                        "restTemplateExchangeTagsProvider",
+                        "management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties"
+                    ]
+                }
+            }
+        }
+    }
 }
